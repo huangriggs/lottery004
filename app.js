@@ -180,7 +180,7 @@ function latLonToVector3(lat, lon, radius) {
     const theta = (lon + 180) * Math.PI / 180;
     
     // Align projection coordinates exactly with Three.js sphere UV wrapping
-    const x = radius * Math.cos(phi) * Math.cos(theta);
+    const x = -(radius * Math.cos(phi) * Math.cos(theta));
     const y = radius * Math.sin(phi);
     const z = radius * Math.cos(phi) * Math.sin(theta);
     
